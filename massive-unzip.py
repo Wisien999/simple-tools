@@ -15,23 +15,20 @@ def unzip_and_delate(file):
 leng = len(sys.argv)
 
 if leng > 2:
-        eFrom = sys.argv[1]
-        eTo = sys.argv[2]
+    eFrom = sys.argv[1]
+    eTo = sys.argv[2]
 elif leng == 2:
-        eFrom = sys.argv[1]
-        eTo = sys.argv[1]
+    eFrom = sys.argv[1]
+    eTo = sys.argv[1]
 else:
-        eFrom = "./"
-        eTo = "./"
+    eFrom = os.getcwd()
+    eTo = os.getcwd()
 
 print("from:", eFrom)
 print("to:", eTo)
-
-files = []
 
 for f in listdir(eFrom):
     filepath = join(eFrom, f)
     if isfile(filepath) and filepath.endswith(".zip"):
         print(f)
         unzip_and_delate(f)
-        
