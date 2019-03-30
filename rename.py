@@ -10,6 +10,7 @@ else:
     print(files)
     print(files[0].find("R"))
     i = 0
+    
     name = sys.argv[2]
     print(len(name))
     for char in name:
